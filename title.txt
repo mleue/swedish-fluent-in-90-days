@@ -3,6 +3,6 @@ title: Swedish - fluent in 90 days
 author: Michael Leue
 rights:  Creative Commons Non-Commercial Share Alike 4.0
 language: en-GB
-cover-image: images/swedish_cover_350.png
+cover-image: images/swedish_cover_a4.png
 stylesheet: style/style.css
 ...

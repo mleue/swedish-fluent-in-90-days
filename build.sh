@@ -13,8 +13,9 @@ echo "...done"
 #building the .pdf file
 pdfout="swedish_fluent_in_90_days.pdf"
 echo "building "$pdfout
-pandoc -S --toc --template="mytemplate.latex" --toc-depth=2 --chapters -o $pdfout $infiles
-pdftk images/swedish_cover_800.pdf swedish_fluent_in_90_days.pdf cat output merged.pdf
+#--variable= options manipulate variables inside the mytemplate.latex file
+pandoc --latex-engine=xelatex -S --toc --template="mytemplate.latex" --variable=fontsize:12pt --variable=mainfont:Verdana --toc-depth=2 --chapters -o $pdfout $infiles
+pdftk images/swedish_cover_a4.pdf swedish_fluent_in_90_days.pdf cat output merged.pdf
 rm swedish_fluent_in_90_days.pdf
 mv merged.pdf swedish_fluent_in_90_days.pdf
 echo "...done"
